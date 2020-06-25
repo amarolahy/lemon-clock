@@ -10,3 +10,19 @@ html,
 body {
   height: 100vh;
 }
+
+$white: #fff5ee;
+$light-green: #8fd899;
+$green: #61c979;
+$dark-green: #007f5f;
+$light-yellow: #f7f377;
+$yellow: #dbcc0f;
+$orange: #fc8535;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: $light-green;
+  height: 100%;
+}
