@@ -11,6 +11,8 @@ body {
   height: 100vh;
 }
 
+// Colors
+$light-white: #fcfbf2;
 $white: #fff5ee;
 $light-green: #8fd899;
 $green: #61c979;
@@ -19,10 +21,45 @@ $light-yellow: #f7f377;
 $yellow: #dbcc0f;
 $orange: #fc8535;
 
+// Sizes
+$face-diameter: 60vmin;
+$center-diameter: 5%;
+
 .wrapper {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   background: $light-green;
   height: 100%;
+}
+
+.face {
+  position: relative;
+  height: $face-diameter;
+  width: $face-diameter;
+  border-radius: 50%;
+  box-shadow: 
+    -0.3vmin -0.3vmin 0.1vmin $white,
+    3vmin 3vmin 0.1vmin $green
+  ;
+
+  background: radial-gradient(
+    ellipse at center, 
+    $light-yellow, $light-yellow 63%, 
+    $light-white calc(63% + 1px), $light-white 65%, 
+    $yellow calc(65% + 1px)
+  );
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $center-diameter;
+    height: $center-diameter;
+    border-radius: 50%;
+    background: $light-white;
+  }
 }
