@@ -190,4 +190,39 @@ $quarter-width: 2.5%;
       }
     }
   }
+
+  .leaf {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 10%;
+      height: 30%;
+      border-radius: 50% 50% 0 0;
+      background: $dark-green;
+    }
+
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 52%;
+      bottom: 5%;
+      transform: translateX(-50%) rotate(30deg);
+      width: 50%;
+      height: 60%;
+      background: $dark-green;
+      clip-path: ellipse(27% 40% at 50% 50%);
+    }
+  }
 }
