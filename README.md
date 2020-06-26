@@ -1,5 +1,5 @@
-# Sass-Typescript Boilerplate
-Boilerplate for HTML5 projects using SASS and Typescript
+# lemon-clock
+Lemon clock using CSS and Javascript
 
 ## Install
 `npm install`
