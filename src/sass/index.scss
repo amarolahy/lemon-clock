@@ -52,7 +52,7 @@ $quarter-width: 2.5%;
     $yellow calc(65% + 1px)
   );
 
-  &::after {
+  &::before {
     content: '';
     display: block;
     position: absolute;
