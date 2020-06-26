@@ -16,4 +16,8 @@ const setTime = () => {
   secondsHand.style.transform = `rotate(${(s / 60) * 360}deg)`;
 }
 
+window.onload = () => {
+  setTime();
+}
+
 setInterval(setTime, 1000);
