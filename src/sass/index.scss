@@ -116,7 +116,6 @@ $quarter-width: 2.5%;
 
     & div {
       position: absolute;
-      transform: translate(-50%);
       transform: rotate(0deg);
       border-radius: 100px 100px;
       background: $white;
@@ -126,11 +125,17 @@ $quarter-width: 2.5%;
     & #seconds {
       top: 8%;
       left: 50% - 0.5%;
-
       width: 1%;
       height: 52%;
       background: $orange;
       transform-origin: 50% 81%;
+    }
+
+    & #minutes {
+      top: 10%;
+      left: 50% - 1.25%;
+      width: 2.5%;
+      height: 40%;
     }
   }
 }
