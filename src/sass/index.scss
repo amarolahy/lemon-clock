@@ -137,5 +137,12 @@ $quarter-width: 2.5%;
       width: 2.5%;
       height: 40%;
     }
+
+    & #hours {
+      top: 15%;
+      left: 50% - 2%;
+      width: 4%;
+      height: 35%;
+    }
   }
 }
