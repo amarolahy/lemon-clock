@@ -1,6 +1,6 @@
 {
   "name": "lemon-clock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lemon clock using CSS",
   "main": "index.js",
   "scripts": {
