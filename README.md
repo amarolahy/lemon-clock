@@ -5,4 +5,7 @@ Lemon clock using CSS and Javascript
 `npm install`
 
 ## Build for dev
-`npm run webpack:dev`
+`npm run dev`
+
+## Build for production
+`npm run build`
