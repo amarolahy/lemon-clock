@@ -1,4 +1,6 @@
-*, 
+@use "sass:math";
+
+*,
 *::after, 
 *::before {
   margin: 0;
@@ -183,9 +185,9 @@ $quarter-width: 2.5%;
       
       @for $i from 1 through 15 {
         &:nth-child( #{ $i }) {
-          top: random($limit: 88) + 1%;
+          top: math.random($limit: 88) + 1%;
           left: $i * 6%;
-          transform: rotate( #{ random(360) }deg );
+          transform: rotate( #{ math.random(360) }deg );
         }
       }
     }
