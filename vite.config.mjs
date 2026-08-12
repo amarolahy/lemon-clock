@@ -7,12 +7,5 @@ export default defineConfig({
     },
     build: {
         outDir: 'dist', // Destination pour le bundle
-    },
-    css: {
-        preprocessorOptions: {
-            scss: {
-                // Options SCSS si nécessaire
-            }
-        }
     }
 });

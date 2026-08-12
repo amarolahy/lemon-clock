@@ -1,4 +1,4 @@
-import '../sass/index.scss';
+import '../css/index.css';
 
 const hoursHand = document.querySelector<HTMLDivElement>('#hours')!;
 const minutesHand = document.querySelector<HTMLDivElement>('#minutes')!;

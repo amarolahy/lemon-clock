@@ -1,0 +1,310 @@
+:root {
+  --light-white: #fcfbf2;
+  --white: #fff5ee;
+  --light-green: #8fd899;
+  --green: #61c979;
+  --dark-green: #007f5f;
+  --light-yellow: #f7f377;
+  --yellow: #dbcc0f;
+  --orange: #fc8535;
+
+  --face-diameter: 60vmin;
+  --center-diameter: 5%;
+  --quarter-height: 12%;
+  --quarter-width: 2.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--light-green);
+  height: 100%;
+}
+
+.face {
+  position: relative;
+  height: var(--face-diameter);
+  width: var(--face-diameter);
+  border-radius: 50%;
+  box-shadow:
+    -0.3vmin -0.3vmin 0.1vmin var(--white),
+    3vmin 3vmin 0.1vmin var(--green);
+  background: radial-gradient(
+    ellipse at center,
+    var(--light-yellow),
+    var(--light-yellow) 63%,
+    var(--light-white) calc(63% + 1px),
+    var(--light-white) 65%,
+    var(--yellow) calc(65% + 1px)
+  );
+}
+
+.face::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--center-diameter);
+  height: var(--center-diameter);
+  border-radius: 50%;
+  background: rgba(252, 251, 242, 0.95);
+}
+
+.face .quarters {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.face .quarters div {
+  position: absolute;
+  background: var(--green);
+  border-radius: 100px 100px;
+}
+
+.face .quarters div:nth-child(odd) {
+  width: var(--quarter-height);
+  height: var(--quarter-width);
+  transform: translateY(-50%);
+}
+
+.face .quarters div:nth-child(even) {
+  width: var(--quarter-width);
+  height: var(--quarter-height);
+  transform: translateX(-50%);
+}
+
+.face .quarters div:nth-child(1) {
+  top: 50%;
+  left: 7%;
+}
+
+.face .quarters div:nth-child(2) {
+  top: 7%;
+  left: 50%;
+}
+
+.face .quarters div:nth-child(3) {
+  top: 50%;
+  right: 7%;
+}
+
+.face .quarters div:nth-child(4) {
+  bottom: 7%;
+  left: 50%;
+}
+
+.face .hands {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.face .hands div {
+  position: absolute;
+  transform: rotate(0deg);
+  border-radius: 100px 100px;
+  background: var(--white);
+  transform-origin: 50% 100%;
+}
+
+.face .hands #seconds {
+  top: 8%;
+  left: calc(50% - 0.5%);
+  width: 1%;
+  height: 52%;
+  background: var(--orange);
+  transform-origin: 50% 81%;
+}
+
+.face .hands #minutes {
+  top: 10%;
+  left: calc(50% - 1.25%);
+  width: 2.5%;
+  height: 40%;
+}
+
+.face .hands #hours {
+  top: 15%;
+  left: calc(50% - 2%);
+  width: 4%;
+  height: 35%;
+}
+
+.face .seeds {
+  position: absolute;
+  height: 75%;
+  width: 75%;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.face .seeds div {
+  display: block;
+  position: absolute;
+  background: var(--light-white);
+  width: 5%;
+  height: 5%;
+  border-radius: 50% 50%;
+  clip-path: polygon(
+    50% 0%,
+    65% 10%,
+    80% 30%,
+    85% 50%,
+    85% 60%,
+    80% 80%,
+    78% 82%,
+    75% 85%,
+    50% 90%,
+    25% 85%,
+    22% 82%,
+    20% 80%,
+    15% 60%,
+    15% 50%,
+    20% 30%,
+    35% 10%
+  );
+}
+
+.face .seeds div:nth-child(1) {
+  top: 18%;
+  left: 6%;
+  transform: rotate(257deg);
+}
+
+.face .seeds div:nth-child(2) {
+  top: 20%;
+  left: 12%;
+  transform: rotate(321deg);
+}
+
+.face .seeds div:nth-child(3) {
+  top: 85%;
+  left: 18%;
+  transform: rotate(143deg);
+}
+
+.face .seeds div:nth-child(4) {
+  top: 67%;
+  left: 24%;
+  transform: rotate(162deg);
+}
+
+.face .seeds div:nth-child(5) {
+  top: 88%;
+  left: 30%;
+  transform: rotate(77deg);
+}
+
+.face .seeds div:nth-child(6) {
+  top: 24%;
+  left: 36%;
+  transform: rotate(257deg);
+}
+
+.face .seeds div:nth-child(7) {
+  top: 59%;
+  left: 42%;
+  transform: rotate(93deg);
+}
+
+.face .seeds div:nth-child(8) {
+  top: 8%;
+  left: 48%;
+  transform: rotate(62deg);
+}
+
+.face .seeds div:nth-child(9) {
+  top: 54%;
+  left: 54%;
+  transform: rotate(292deg);
+}
+
+.face .seeds div:nth-child(10) {
+  top: 19%;
+  left: 60%;
+  transform: rotate(259deg);
+}
+
+.face .seeds div:nth-child(11) {
+  top: 59%;
+  left: 66%;
+  transform: rotate(289deg);
+}
+
+.face .seeds div:nth-child(12) {
+  top: 31%;
+  left: 72%;
+  transform: rotate(252deg);
+}
+
+.face .seeds div:nth-child(13) {
+  top: 20%;
+  left: 78%;
+  transform: rotate(3deg);
+}
+
+.face .seeds div:nth-child(14) {
+  top: 53%;
+  left: 84%;
+  transform: rotate(113deg);
+}
+
+.face .seeds div:nth-child(15) {
+  top: 50%;
+  left: 90%;
+  transform: rotate(308deg);
+}
+
+.face .leaf {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.face .leaf::before {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 10%;
+  height: 30%;
+  border-radius: 50% 50% 0 0;
+  background: var(--dark-green);
+}
+
+.face .leaf::after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 52%;
+  bottom: 5%;
+  transform: translateX(-50%) rotate(30deg);
+  width: 50%;
+  height: 60%;
+  background: var(--dark-green);
+  clip-path: ellipse(27% 40% at 50% 50%);
+}
