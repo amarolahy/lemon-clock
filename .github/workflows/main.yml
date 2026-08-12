@@ -56,14 +56,7 @@ jobs:
           chmod 600 ~/.ssh/config
 
       - name: Deploy via rsync over SSH
-        uses: burnett01/rsync-deployments@v9
-        with:
-          switches: -rlpDz --delete
-          path: dist/
-          remote_path: ${{ secrets.DEPLOY_PATH }}
-          remote_host: target-server
-          remote_user: ${{ secrets.DEPLOY_USER }}
-          remote_key: ${{ secrets.DEPLOY_KEY }}
+        run: rsync -rlpDz --delete -e ssh dist/ ${{ secrets.DEPLOY_USER }}@target-server:${{ secrets.DEPLOY_PATH }}
 
       - name: Health check
         run: |
