@@ -1,8 +1,8 @@
 import '../sass/index.scss';
 
-const hoursHand = document.querySelector<HTMLDivElement>('#hours');
-const minutesHand = document.querySelector<HTMLDivElement>('#minutes');
-const secondsHand = document.querySelector<HTMLDivElement>('#seconds');
+const hoursHand = document.querySelector<HTMLDivElement>('#hours')!;
+const minutesHand = document.querySelector<HTMLDivElement>('#minutes')!;
+const secondsHand = document.querySelector<HTMLDivElement>('#seconds')!;
 
 const setTime = () => {
   const now = new Date();

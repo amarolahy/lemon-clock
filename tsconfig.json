@@ -1,12 +1,20 @@
 {
   "compilerOptions": {
-    "outDir": "dist/",
-    "noImplicitAny": true,
-    "module": "commonjs",
-    "target": "es2015",
-    "jsx": "react"
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "useDefineForClassFields": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "types": ["vite/client"]
   },
-  "include": [
-    "./src/ts/**/*"
-  ]
+  "include": ["src"]
 }
