@@ -2,10 +2,10 @@
 Lemon clock using CSS and Javascript
 
 ## Install
-`npm install`
+`bun install`
 
 ## Build for dev
-`npm run dev`
+`bun run dev`
 
 ## Build for production
-`npm run build`
+`bun run build`
