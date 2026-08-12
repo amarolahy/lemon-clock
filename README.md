@@ -1,11 +1,23 @@
 # lemon-clock
+
 Lemon clock using CSS and Javascript
 
 ## Install
+
 `bun install`
 
 ## Build for dev
+
 `bun run dev`
 
 ## Build for production
+
 `bun run build`
+
+## Lint
+
+`bun run lint`
+
+## Format
+
+`bun run format`

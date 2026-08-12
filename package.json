@@ -2,11 +2,16 @@
   "name": "lemon-clock",
   "version": "1.0.2",
   "description": "Lemon clock using CSS",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "preview": "vite preview"
   },
   "keywords": [
@@ -18,7 +23,10 @@
   "license": "ISC",
   "packageManager": "bun@1.3.14",
   "devDependencies": {
-    "typescript": "^7.0.2",
+    "eslint": "^10.8.1",
+    "prettier": "^3.9.6",
+    "typescript": "^6.0.0",
+    "typescript-eslint": "^8.67.0",
     "vite": "^8.2.1"
   }
 }
